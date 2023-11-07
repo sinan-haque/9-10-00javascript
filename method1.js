@@ -64,3 +64,20 @@ console.log(output1);
 
 
 
+
+//shortcut
+
+const number2=[2,34,46,57];
+const output2=number2.map((number)=> `${ number*number/5}`);
+console.log(output2);
+
+
+//realistic example
+
+const user9=[
+    {fname:'sinan',roll:222171},
+    {fname:'samin',roll:222471},
+    {fname:'siam',roll:229171},
+];
+const output3=user9.map(userA=>userA.fname);
+console.log(output3);
