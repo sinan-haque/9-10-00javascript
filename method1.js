@@ -51,3 +51,16 @@ user2.forEach(user3=>{
 })
 const number20=[23,34,46,57];
 number20.forEach(output=>{console.log(output*200)});
+
+
+//map merthods
+const number1=[2,34,46,57];
+
+const math=function(number){
+    return number * number/2
+}
+const output1=number1.map(math);
+console.log(output1);
+
+
+
