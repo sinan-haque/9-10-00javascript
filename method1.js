@@ -81,3 +81,31 @@ const user9=[
 ];
 const output3=user9.map(userA=>userA.fname);
 console.log(output3);
+
+
+//reduce methods
+
+const userCard=[
+    {Productid:1,ProductName:'tv',price:12000},
+    {Productid:1,ProductName:'Mobile',price:16000},
+    {Productid:1,ProductName:'Ac',price:14000},
+]
+const output4=userCard.reduce(
+    function(totalamount,pricevalue){
+        return totalamount+pricevalue.price;
+    },0
+)
+console.log(output4);
+
+
+//filter methods
+const number5=[2,34,46,57,466,35,6,75,4,56,765,7,5,64];
+const output5=number5.filter(number=>number<10);
+console.log(output5);
+
+
+//sort metrhod
+
+const number6=[2,34,46,57,466,35,6,75,4,56,765,7,5,64];
+const output6=number6.sort((a,b)=>b-a);
+console.log(output6);
