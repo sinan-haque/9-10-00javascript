@@ -26,3 +26,6 @@ class dog extends animal{
 const person2=new dog('likhon',2);
 console.log(person2);
 console.log(person2.about())
+
+
+

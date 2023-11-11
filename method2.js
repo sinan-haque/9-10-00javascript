@@ -50,3 +50,5 @@ const item=['item1','item2','item3','item4'];
 const output6=item.splice(2,1,'itenmmm');
 console.log(item);
 console.log(output6);
+
+
