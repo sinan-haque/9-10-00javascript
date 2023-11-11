@@ -29,6 +29,24 @@ const person1 =[
     {userId:106,username:'samin haque',add:'boirob',model:77000},
 
 ];
-const output3=person1.every(PersonValue=>PersonValue.model<100000);
-console.log(output3);
+const output3=person1.every(findPerson1=>findPerson1.model<=79000);//beshi ba soram hole ture and kom hole flase
+console.log(output3)
 
+//some methods
+const user1=[34,56,68,532,34,35,456453];
+const output4=user1.some(math=>math%2===0);
+console.log(output4);
+
+
+//filter methods 
+const number1=[34,56,68,532,34,35,456453];
+const output5=number1.filter(number=>number%2===0);
+console.log(output5);
+
+//splice methods
+
+
+const item=['item1','item2','item3','item4'];
+const output6=item.splice(2,1,'itenmmm');
+console.log(item);
+console.log(output6);
