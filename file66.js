@@ -217,3 +217,11 @@ function username(name,age,roll){
 }
 const user6=username('sinan',13,23134);
 console.log(user6.about());
+
+const obj4={
+    key1:'value1',
+    key2:'value2'
+}
+const obj0=Object.create(obj4);
+obj0.key3='value3';
+console.log(obj0);
