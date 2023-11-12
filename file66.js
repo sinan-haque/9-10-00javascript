@@ -1,3 +1,5 @@
+
+
 const fullname=['sinan haque'];
 for(let name of fullname){
     console.log(name);
@@ -182,3 +184,36 @@ myfunc();
 
 
 // call method = apply method are same and bind methods is different
+
+
+
+
+const user0={
+    name:'samin ',
+    add:'shibpur',
+    about:function(){
+        console.log(`my name is ${this.name} and I live in ${this.add}`)
+    }
+}
+user0.about.call(user0);
+user0.about.apply(user0);
+
+
+
+const func={
+    about:function(){
+        return `my name is ${this.name} and i am ${this.age} years old ,roll ${this.roll}`
+    }
+}
+
+function username(name,age,roll){
+    const user00={};
+    user00.name=name;
+    user00.age=age;
+    user00.roll=roll;
+    user00.about=func.about;
+    
+    return user00
+}
+const user6=username('sinan',13,23134);
+console.log(user6.about());
