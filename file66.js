@@ -82,3 +82,103 @@ const user2={
 console.log(user2?.name);
 console.log(user2.address);
 
+
+
+const person={
+    name:'sinan haque',
+    age:22,
+    about:function(){
+        console.log(`my name is ${this.name} and i am ${this.age} years old`)
+
+    }
+}
+person.about();
+
+
+
+const person0={
+    name:'sinan haque',
+    age:20,
+    about:function(){
+        console.log(`my name is ${this.name} and i am ${this.age} years old`)
+
+    }
+}
+
+
+const person4={
+    name:'sadbin haque',
+    age:24,
+    about:function(){
+        console.log(`my name is ${this.name} and i am ${this.age} years old`)
+
+    }
+}
+
+const person3={
+    name:'addin haque',
+    age:12,
+    about:function(){
+        console.log(`my name is ${this.name} and i am ${this.age} years old`)
+
+    }
+}
+person0.about();
+person3.about();
+person4.about();
+
+
+
+
+
+
+// console.log(window);
+
+
+//strict
+function thiss(){
+    console.log(this);
+}
+thiss()
+
+
+
+
+const user={
+    name:'samin ',
+    add:'shibpur',
+    about:function(){
+        console.log(`my name is ${this.name} and I live in ${this.add}`)
+    } //function na banale run korbe na
+    
+}
+const user1={
+    name:'akbar ',
+    add:'india'
+}
+user.about.call(user2);
+
+
+
+function about(extraadd){
+    console.log(`my name is ${this.name}.I am ${this.age} year old.I live in ${this.add}. i like `, extraadd)
+
+}
+const person6={
+    name:'sinan haque',
+    age:18,
+    add:'shibpur'
+}
+
+const person7={
+    name:'sadbin haque',
+    age:28,
+    add:'dhaka'
+}
+about.call(person6,'cabadi');
+about.apply(person6,['football']);
+const myfunc=about.bind(person7,'bat');
+myfunc();
+
+
+// call method = apply method are same and bind methods is different
