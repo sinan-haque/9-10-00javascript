@@ -216,7 +216,7 @@ function username(name,age,roll){
     return user00
 }
 const user6=username('sinan',13,23134);
-console.log(user6.about());
+console.log(user6)
 
 const obj4={
     key1:'value1',
@@ -225,3 +225,25 @@ const obj4={
 const obj0=Object.create(obj4);
 obj0.key3='value3';
 console.log(obj0);
+
+
+
+function username(name,add,roll,section){
+
+    this.name=name;
+    this.add=add;
+    this.roll=roll;
+    this.section=section;
+}
+username.prototype.about=function(){
+    return `my name is ${this.name},I live in ${this.add},${this.roll},${this.section}`
+} 
+username.prototype.song=function(){
+    return 'i love youu'
+}
+const output8=new username('sinan haque','narsigdi',222171,'flower');
+console.log(output8.about());
+console.log(output8.song());
+
+
+
