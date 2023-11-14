@@ -247,3 +247,94 @@ console.log(output8.song());
 
 
 
+//class
+
+
+// class animal{
+//     constructor(){
+//         this.name=name;
+//         this.age=age;
+//     }
+// }
+class animal{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    about=function(){
+       return `my dog name is ${this.name} and dog age is ${this.age}`
+    }
+    cute=function(){
+        return this.age>=2;
+    }
+
+}
+const output9=new animal('tomi',2);
+console.log(output9.about());
+console.log(output9.cute());
+
+
+
+//class
+
+
+class animal1{
+
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    about(){
+        return `${this.name},${this.age}`
+    }
+}
+class dog extends animal1{
+   constructor(name,age,speed){
+    super(name,age);
+    this.speed=speed;
+   }
+   run(){
+    return `my dog name is ${this.name} and dog age is ${this.age} and dog speed per second ${this.speed}`
+   }
+}
+const output10=new dog('toni',2,'45mps');
+console.log(output10.run());
+
+
+
+
+class animal2{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+   get about(){
+       return `my dog name is ${this.name} and dog age is ${this.age}`
+    }
+}
+const output11=new animal2('tomi',2);
+console.log(output11.about);
+
+
+
+class person10{
+    constructor(fname,lname,roll){
+        this.fname=fname;
+        this.lname=lname;
+        this.roll=roll;
+    }
+    get about(){
+        return `${this.fname},${this.lname}`
+    }
+    set fullname(fullname){
+        const [fname,lname]=fullname.split('')
+        this.fname=fname;
+        this.lname=lname;
+
+    }
+}
+const output12=new person10('sinan','haque');
+
+person10.fullname='sinan haque';
+console.log(output12.about);
+console.log(person10.fullname);
